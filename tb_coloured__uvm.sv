@@ -36,8 +36,31 @@ int dsa = 10;
 
 `define uvmc_info(root,msg,level,msg_color)\
     case (msg_color)\
-        GREEN   : str_msg_color = "0;32m";\
-        YELLOW  : str_msg_color = "0;33m";\
+        GREEN               : str_msg_color = "0;32m";\
+        YELLOW              : str_msg_color = "0;33m";\
+        BLUE                : str_msg_color = "0;34m";\
+        MAGENTA             : str_msg_color = "0;35m";\
+        CYAN                : str_msg_color = "0;36m";\
+        WHITE               : str_msg_color = "0;37m";\
+        BOLD_GREEN          : str_msg_color = "1;32m";\
+        BOLD_YELLOW         : str_msg_color = "1;33m";\
+        BOLD_BLUE           : str_msg_color = "1;34m";\
+        BOLD_MAGENTA        : str_msg_color = "1;35m";\
+        BOLD_CYAN           : str_msg_color = "1;36m";\
+        BOLD_WHITE          : str_msg_color = "1;37m";\
+        UNDERLINE_GREEN     : str_msg_color = "4;32m";\
+        UNDERLINE_YELLOW    : str_msg_color = "4;33m";\
+        UNDERLINE_BLUE      : str_msg_color = "4;34m";\
+        UNDERLINE_MAGENTA   : str_msg_color = "4;35m";\
+        UNDERLINE_CYAN      : str_msg_color = "4;36m";\
+        UNDERLINE_WHITE     : str_msg_color = "4;37m";\
+        BACKGROUND_GREEN    : str_msg_color = "42m";\
+        BACKGROUND_YELLOW   : str_msg_color = "43m";\
+        BACKGROUND_BLUE     : str_msg_color = "44m";\
+        BACKGROUND_MAGENTA  : str_msg_color = "45m";\
+        BACKGROUND_CYAN     : str_msg_color = "46m";\
+        BACKGROUND_WHITE    : str_msg_color = "47m";\
+        default             : str_msg_color = "1;34m";\
     endcase\
     `uvm_info(root, $sformatf("%c[%s: %s %c[0m", 27,str_msg_color, msg , 27), level);\
 
